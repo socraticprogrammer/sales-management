@@ -26,6 +26,9 @@
     "aws",
     "cloud"
   ],
+  "scripts": {
+    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/server.ts"
+  },
   "author": {
     "name": "Thalles Lossurdo",
     "email": "thallesgabriel1307@gmail.com",
