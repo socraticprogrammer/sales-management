@@ -3,6 +3,7 @@ import express, { Request, Response } from 'express';
 import cors from 'cors';
 import routes from './routes';
 import AppError from '@shared/errors/app-error';
+import databaseConnection from '@shared/db/connection';
 
 const app = express();
 app.use(cors());
@@ -23,4 +24,7 @@ app.use((error: Error, request: Request, response: Response) => {
   });
 });
 
-app.listen(3333, () => console.info('Server started on 3333 port!'));
+app.listen(3333, () => {
+  databaseConnection.initialize();
+  console.info('Server started on 3333 port!');
+});
