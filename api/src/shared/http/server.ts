@@ -1,4 +1,5 @@
-import express, { Request, Response, NextFunction } from 'express';
+import 'reflect-metadata';
+import express, { Request, Response } from 'express';
 import cors from 'cors';
 import routes from './routes';
 import AppError from '@shared/errors/app-error';
